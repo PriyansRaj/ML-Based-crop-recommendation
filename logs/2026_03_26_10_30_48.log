@@ -1,0 +1,383 @@
+[2026-03-26 10:31:07,786 ] 100 root - INFO - Starting main pipeline
+[2026-03-26 10:31:07,788 ] 38 root - INFO - All preprocessing artifacts are available
+[2026-03-26 10:31:07,788 ] 106 root - INFO - Skipping preprocessing
+[2026-03-26 10:31:07,789 ] 51 root - INFO - No saved model files found
+[2026-03-26 10:31:07,789 ] 109 root - INFO - Trained models not found. Running model training
+[2026-03-26 10:31:07,789 ] 135 root - INFO - Running fit function
+[2026-03-26 10:31:07,789 ] 42 root - INFO - Training the models
+[2026-03-26 10:31:07,789 ] 27 root - INFO - Loading transformed training data
+[2026-03-26 10:31:07,790 ] 9 root - INFO - Opening datafile
+[2026-03-26 10:31:07,811 ] 12 root - INFO - Datafile opened
+[2026-03-26 10:31:07,814 ] 34 root - INFO - Training data loaded successfully
+[2026-03-26 10:31:07,814 ] 59 root - INFO - Fitting perceptron model
+[2026-03-26 10:31:07,840 ] 64 root - INFO - perceptron training completed
+[2026-03-26 10:31:07,841 ] 65 root - INFO - Saving perceptron model
+[2026-03-26 10:31:07,841 ] 20 root - INFO - Saving the model
+[2026-03-26 10:31:07,842 ] 23 root - INFO - Model saved
+[2026-03-26 10:31:07,842 ] 59 root - INFO - Fitting svm model
+[2026-03-26 10:31:08,047 ] 64 root - INFO - svm training completed
+[2026-03-26 10:31:08,047 ] 65 root - INFO - Saving svm model
+[2026-03-26 10:31:08,047 ] 20 root - INFO - Saving the model
+[2026-03-26 10:31:08,049 ] 23 root - INFO - Model saved
+[2026-03-26 10:31:08,049 ] 59 root - INFO - Fitting knn model
+[2026-03-26 10:31:08,055 ] 64 root - INFO - knn training completed
+[2026-03-26 10:31:08,057 ] 65 root - INFO - Saving knn model
+[2026-03-26 10:31:08,058 ] 20 root - INFO - Saving the model
+[2026-03-26 10:31:08,060 ] 23 root - INFO - Model saved
+[2026-03-26 10:31:08,062 ] 59 root - INFO - Fitting decision_tree model
+[2026-03-26 10:31:08,093 ] 64 root - INFO - decision_tree training completed
+[2026-03-26 10:31:08,093 ] 65 root - INFO - Saving decision_tree model
+[2026-03-26 10:31:08,093 ] 20 root - INFO - Saving the model
+[2026-03-26 10:31:08,095 ] 23 root - INFO - Model saved
+[2026-03-26 10:31:08,096 ] 59 root - INFO - Fitting random_forest model
+[2026-03-26 10:31:08,509 ] 64 root - INFO - random_forest training completed
+[2026-03-26 10:31:08,510 ] 65 root - INFO - Saving random_forest model
+[2026-03-26 10:31:08,510 ] 20 root - INFO - Saving the model
+[2026-03-26 10:31:08,518 ] 23 root - INFO - Model saved
+[2026-03-26 10:31:08,518 ] 59 root - INFO - Fitting gradient_boosting model
+[2026-03-26 10:31:21,561 ] 64 root - INFO - gradient_boosting training completed
+[2026-03-26 10:31:21,561 ] 65 root - INFO - Saving gradient_boosting model
+[2026-03-26 10:31:21,561 ] 20 root - INFO - Saving the model
+[2026-03-26 10:31:21,608 ] 23 root - INFO - Model saved
+[2026-03-26 10:31:21,608 ] 59 root - INFO - Fitting adaboost model
+[2026-03-26 10:31:21,834 ] 64 root - INFO - adaboost training completed
+[2026-03-26 10:31:21,834 ] 65 root - INFO - Saving adaboost model
+[2026-03-26 10:31:21,834 ] 20 root - INFO - Saving the model
+[2026-03-26 10:31:21,836 ] 23 root - INFO - Model saved
+[2026-03-26 10:31:21,837 ] 59 root - INFO - Fitting xgboost model
+[2026-03-26 10:31:22,588 ] 64 root - INFO - xgboost training completed
+[2026-03-26 10:31:22,588 ] 65 root - INFO - Saving xgboost model
+[2026-03-26 10:31:22,589 ] 20 root - INFO - Saving the model
+[2026-03-26 10:31:22,615 ] 23 root - INFO - Model saved
+[2026-03-26 10:31:22,618 ] 59 root - INFO - Fitting voting_classifier model
+[2026-03-26 10:31:23,270 ] 64 root - INFO - voting_classifier training completed
+[2026-03-26 10:31:23,270 ] 65 root - INFO - Saving voting_classifier model
+[2026-03-26 10:31:23,271 ] 20 root - INFO - Saving the model
+[2026-03-26 10:31:23,279 ] 23 root - INFO - Model saved
+[2026-03-26 10:31:23,280 ] 59 root - INFO - Fitting bagging_knn model
+[2026-03-26 10:31:23,313 ] 64 root - INFO - bagging_knn training completed
+[2026-03-26 10:31:23,313 ] 65 root - INFO - Saving bagging_knn model
+[2026-03-26 10:31:23,314 ] 20 root - INFO - Saving the model
+[2026-03-26 10:31:23,318 ] 23 root - INFO - Model saved
+[2026-03-26 10:31:23,318 ] 59 root - INFO - Fitting bagging_svm model
+[2026-03-26 10:31:24,515 ] 64 root - INFO - bagging_svm training completed
+[2026-03-26 10:31:24,516 ] 65 root - INFO - Saving bagging_svm model
+[2026-03-26 10:31:24,516 ] 20 root - INFO - Saving the model
+[2026-03-26 10:31:24,525 ] 23 root - INFO - Model saved
+[2026-03-26 10:31:24,525 ] 69 root - INFO - Training completed
+[2026-03-26 10:31:24,525 ] 138 root - INFO - Running testing
+[2026-03-26 10:31:24,525 ] 9 root - INFO - Opening datafile
+[2026-03-26 10:31:24,545 ] 12 root - INFO - Datafile opened
+[2026-03-26 10:31:24,546 ] 77 root - INFO - Getting fitted models
+[2026-03-26 10:31:24,546 ] 42 root - INFO - Training the models
+[2026-03-26 10:31:24,547 ] 27 root - INFO - Loading transformed training data
+[2026-03-26 10:31:24,547 ] 9 root - INFO - Opening datafile
+[2026-03-26 10:31:24,554 ] 12 root - INFO - Datafile opened
+[2026-03-26 10:31:24,554 ] 34 root - INFO - Training data loaded successfully
+[2026-03-26 10:31:24,555 ] 59 root - INFO - Fitting perceptron model
+[2026-03-26 10:31:24,579 ] 64 root - INFO - perceptron training completed
+[2026-03-26 10:31:24,579 ] 65 root - INFO - Saving perceptron model
+[2026-03-26 10:31:24,579 ] 20 root - INFO - Saving the model
+[2026-03-26 10:31:24,581 ] 23 root - INFO - Model saved
+[2026-03-26 10:31:24,581 ] 59 root - INFO - Fitting svm model
+[2026-03-26 10:31:24,776 ] 64 root - INFO - svm training completed
+[2026-03-26 10:31:24,777 ] 65 root - INFO - Saving svm model
+[2026-03-26 10:31:24,777 ] 20 root - INFO - Saving the model
+[2026-03-26 10:31:24,778 ] 23 root - INFO - Model saved
+[2026-03-26 10:31:24,779 ] 59 root - INFO - Fitting knn model
+[2026-03-26 10:31:24,784 ] 64 root - INFO - knn training completed
+[2026-03-26 10:31:24,784 ] 65 root - INFO - Saving knn model
+[2026-03-26 10:31:24,784 ] 20 root - INFO - Saving the model
+[2026-03-26 10:31:24,785 ] 23 root - INFO - Model saved
+[2026-03-26 10:31:24,786 ] 59 root - INFO - Fitting decision_tree model
+[2026-03-26 10:31:24,806 ] 64 root - INFO - decision_tree training completed
+[2026-03-26 10:31:24,806 ] 65 root - INFO - Saving decision_tree model
+[2026-03-26 10:31:24,806 ] 20 root - INFO - Saving the model
+[2026-03-26 10:31:24,807 ] 23 root - INFO - Model saved
+[2026-03-26 10:31:24,808 ] 59 root - INFO - Fitting random_forest model
+[2026-03-26 10:31:25,176 ] 64 root - INFO - random_forest training completed
+[2026-03-26 10:31:25,176 ] 65 root - INFO - Saving random_forest model
+[2026-03-26 10:31:25,176 ] 20 root - INFO - Saving the model
+[2026-03-26 10:31:25,185 ] 23 root - INFO - Model saved
+[2026-03-26 10:31:25,185 ] 59 root - INFO - Fitting gradient_boosting model
+[2026-03-26 10:31:38,364 ] 64 root - INFO - gradient_boosting training completed
+[2026-03-26 10:31:38,364 ] 65 root - INFO - Saving gradient_boosting model
+[2026-03-26 10:31:38,365 ] 20 root - INFO - Saving the model
+[2026-03-26 10:31:38,412 ] 23 root - INFO - Model saved
+[2026-03-26 10:31:38,412 ] 59 root - INFO - Fitting adaboost model
+[2026-03-26 10:31:38,629 ] 64 root - INFO - adaboost training completed
+[2026-03-26 10:31:38,630 ] 65 root - INFO - Saving adaboost model
+[2026-03-26 10:31:38,630 ] 20 root - INFO - Saving the model
+[2026-03-26 10:31:38,632 ] 23 root - INFO - Model saved
+[2026-03-26 10:31:38,632 ] 59 root - INFO - Fitting xgboost model
+[2026-03-26 10:31:39,253 ] 64 root - INFO - xgboost training completed
+[2026-03-26 10:31:39,253 ] 65 root - INFO - Saving xgboost model
+[2026-03-26 10:31:39,253 ] 20 root - INFO - Saving the model
+[2026-03-26 10:31:39,279 ] 23 root - INFO - Model saved
+[2026-03-26 10:31:39,280 ] 59 root - INFO - Fitting voting_classifier model
+[2026-03-26 10:31:39,916 ] 64 root - INFO - voting_classifier training completed
+[2026-03-26 10:31:39,916 ] 65 root - INFO - Saving voting_classifier model
+[2026-03-26 10:31:39,916 ] 20 root - INFO - Saving the model
+[2026-03-26 10:31:39,924 ] 23 root - INFO - Model saved
+[2026-03-26 10:31:39,924 ] 59 root - INFO - Fitting bagging_knn model
+[2026-03-26 10:31:39,957 ] 64 root - INFO - bagging_knn training completed
+[2026-03-26 10:31:39,958 ] 65 root - INFO - Saving bagging_knn model
+[2026-03-26 10:31:39,958 ] 20 root - INFO - Saving the model
+[2026-03-26 10:31:39,962 ] 23 root - INFO - Model saved
+[2026-03-26 10:31:39,962 ] 59 root - INFO - Fitting bagging_svm model
+[2026-03-26 10:31:41,178 ] 64 root - INFO - bagging_svm training completed
+[2026-03-26 10:31:41,178 ] 65 root - INFO - Saving bagging_svm model
+[2026-03-26 10:31:41,178 ] 20 root - INFO - Saving the model
+[2026-03-26 10:31:41,182 ] 23 root - INFO - Model saved
+[2026-03-26 10:31:41,182 ] 69 root - INFO - Training completed
+[2026-03-26 10:31:41,182 ] 88 root - INFO - Testing perceptron model
+[2026-03-26 10:31:41,184 ] 88 root - INFO - Testing svm model
+[2026-03-26 10:31:41,241 ] 88 root - INFO - Testing knn model
+[2026-03-26 10:31:41,252 ] 88 root - INFO - Testing decision_tree model
+[2026-03-26 10:31:41,253 ] 88 root - INFO - Testing random_forest model
+[2026-03-26 10:31:41,268 ] 88 root - INFO - Testing gradient_boosting model
+[2026-03-26 10:31:41,282 ] 88 root - INFO - Testing adaboost model
+[2026-03-26 10:31:41,292 ] 88 root - INFO - Testing xgboost model
+[2026-03-26 10:31:41,301 ] 88 root - INFO - Testing voting_classifier model
+[2026-03-26 10:31:41,432 ] 88 root - INFO - Testing bagging_knn model
+[2026-03-26 10:31:41,511 ] 88 root - INFO - Testing bagging_svm model
+[2026-03-26 10:31:41,961 ] 92 root - INFO - Testing completed
+[2026-03-26 10:31:41,976 ] 149 root - INFO - Evaluating models
+[2026-03-26 10:31:41,976 ] 22 root - INFO - Starting evaluation
+[2026-03-26 10:31:41,976 ] 24 root - INFO - Calculating accuracy score
+[2026-03-26 10:31:41,978 ] 27 root - INFO - Calculating precision score
+[2026-03-26 10:31:41,980 ] 30 root - INFO - Calculating F1 score
+[2026-03-26 10:31:41,983 ] 33 root - INFO - Calculating confusion matrix
+[2026-03-26 10:31:41,984 ] 36 root - INFO - Calculating recall score
+[2026-03-26 10:31:41,989 ] 22 root - INFO - Starting evaluation
+[2026-03-26 10:31:41,989 ] 24 root - INFO - Calculating accuracy score
+[2026-03-26 10:31:41,990 ] 27 root - INFO - Calculating precision score
+[2026-03-26 10:31:41,993 ] 30 root - INFO - Calculating F1 score
+[2026-03-26 10:31:41,996 ] 33 root - INFO - Calculating confusion matrix
+[2026-03-26 10:31:41,997 ] 36 root - INFO - Calculating recall score
+[2026-03-26 10:31:42,005 ] 73 root - INFO - Evaluation report saved at reports\perceptron.pdf
+[2026-03-26 10:31:42,006 ] 22 root - INFO - Starting evaluation
+[2026-03-26 10:31:42,006 ] 24 root - INFO - Calculating accuracy score
+[2026-03-26 10:31:42,007 ] 27 root - INFO - Calculating precision score
+[2026-03-26 10:31:42,009 ] 30 root - INFO - Calculating F1 score
+[2026-03-26 10:31:42,012 ] 33 root - INFO - Calculating confusion matrix
+[2026-03-26 10:31:42,013 ] 36 root - INFO - Calculating recall score
+[2026-03-26 10:31:42,017 ] 22 root - INFO - Starting evaluation
+[2026-03-26 10:31:42,017 ] 24 root - INFO - Calculating accuracy score
+[2026-03-26 10:31:42,018 ] 27 root - INFO - Calculating precision score
+[2026-03-26 10:31:42,020 ] 30 root - INFO - Calculating F1 score
+[2026-03-26 10:31:42,022 ] 33 root - INFO - Calculating confusion matrix
+[2026-03-26 10:31:42,023 ] 36 root - INFO - Calculating recall score
+[2026-03-26 10:31:42,031 ] 73 root - INFO - Evaluation report saved at reports\svm.pdf
+[2026-03-26 10:31:42,032 ] 22 root - INFO - Starting evaluation
+[2026-03-26 10:31:42,032 ] 24 root - INFO - Calculating accuracy score
+[2026-03-26 10:31:42,033 ] 27 root - INFO - Calculating precision score
+[2026-03-26 10:31:42,035 ] 30 root - INFO - Calculating F1 score
+[2026-03-26 10:31:42,038 ] 33 root - INFO - Calculating confusion matrix
+[2026-03-26 10:31:42,039 ] 36 root - INFO - Calculating recall score
+[2026-03-26 10:31:42,042 ] 22 root - INFO - Starting evaluation
+[2026-03-26 10:31:42,042 ] 24 root - INFO - Calculating accuracy score
+[2026-03-26 10:31:42,043 ] 27 root - INFO - Calculating precision score
+[2026-03-26 10:31:42,046 ] 30 root - INFO - Calculating F1 score
+[2026-03-26 10:31:42,048 ] 33 root - INFO - Calculating confusion matrix
+[2026-03-26 10:31:42,049 ] 36 root - INFO - Calculating recall score
+[2026-03-26 10:31:42,056 ] 73 root - INFO - Evaluation report saved at reports\knn.pdf
+[2026-03-26 10:31:42,057 ] 22 root - INFO - Starting evaluation
+[2026-03-26 10:31:42,057 ] 24 root - INFO - Calculating accuracy score
+[2026-03-26 10:31:42,058 ] 27 root - INFO - Calculating precision score
+[2026-03-26 10:31:42,060 ] 30 root - INFO - Calculating F1 score
+[2026-03-26 10:31:42,062 ] 33 root - INFO - Calculating confusion matrix
+[2026-03-26 10:31:42,064 ] 36 root - INFO - Calculating recall score
+[2026-03-26 10:31:42,067 ] 22 root - INFO - Starting evaluation
+[2026-03-26 10:31:42,067 ] 24 root - INFO - Calculating accuracy score
+[2026-03-26 10:31:42,068 ] 27 root - INFO - Calculating precision score
+[2026-03-26 10:31:42,070 ] 30 root - INFO - Calculating F1 score
+[2026-03-26 10:31:42,072 ] 33 root - INFO - Calculating confusion matrix
+[2026-03-26 10:31:42,073 ] 36 root - INFO - Calculating recall score
+[2026-03-26 10:31:42,080 ] 73 root - INFO - Evaluation report saved at reports\decision_tree.pdf
+[2026-03-26 10:31:42,081 ] 22 root - INFO - Starting evaluation
+[2026-03-26 10:31:42,081 ] 24 root - INFO - Calculating accuracy score
+[2026-03-26 10:31:42,082 ] 27 root - INFO - Calculating precision score
+[2026-03-26 10:31:42,085 ] 30 root - INFO - Calculating F1 score
+[2026-03-26 10:31:42,087 ] 33 root - INFO - Calculating confusion matrix
+[2026-03-26 10:31:42,088 ] 36 root - INFO - Calculating recall score
+[2026-03-26 10:31:42,091 ] 22 root - INFO - Starting evaluation
+[2026-03-26 10:31:42,092 ] 24 root - INFO - Calculating accuracy score
+[2026-03-26 10:31:42,092 ] 27 root - INFO - Calculating precision score
+[2026-03-26 10:31:42,095 ] 30 root - INFO - Calculating F1 score
+[2026-03-26 10:31:42,097 ] 33 root - INFO - Calculating confusion matrix
+[2026-03-26 10:31:42,098 ] 36 root - INFO - Calculating recall score
+[2026-03-26 10:31:42,105 ] 73 root - INFO - Evaluation report saved at reports\random_forest.pdf
+[2026-03-26 10:31:42,105 ] 22 root - INFO - Starting evaluation
+[2026-03-26 10:31:42,105 ] 24 root - INFO - Calculating accuracy score
+[2026-03-26 10:31:42,106 ] 27 root - INFO - Calculating precision score
+[2026-03-26 10:31:42,108 ] 30 root - INFO - Calculating F1 score
+[2026-03-26 10:31:42,111 ] 33 root - INFO - Calculating confusion matrix
+[2026-03-26 10:31:42,112 ] 36 root - INFO - Calculating recall score
+[2026-03-26 10:31:42,116 ] 22 root - INFO - Starting evaluation
+[2026-03-26 10:31:42,116 ] 24 root - INFO - Calculating accuracy score
+[2026-03-26 10:31:42,117 ] 27 root - INFO - Calculating precision score
+[2026-03-26 10:31:42,119 ] 30 root - INFO - Calculating F1 score
+[2026-03-26 10:31:42,121 ] 33 root - INFO - Calculating confusion matrix
+[2026-03-26 10:31:42,122 ] 36 root - INFO - Calculating recall score
+[2026-03-26 10:31:42,129 ] 73 root - INFO - Evaluation report saved at reports\gradient_boosting.pdf
+[2026-03-26 10:31:42,130 ] 22 root - INFO - Starting evaluation
+[2026-03-26 10:31:42,130 ] 24 root - INFO - Calculating accuracy score
+[2026-03-26 10:31:42,131 ] 27 root - INFO - Calculating precision score
+[2026-03-26 10:31:42,154 ] 30 root - INFO - Calculating F1 score
+[2026-03-26 10:31:42,156 ] 33 root - INFO - Calculating confusion matrix
+[2026-03-26 10:31:42,157 ] 36 root - INFO - Calculating recall score
+[2026-03-26 10:31:42,162 ] 22 root - INFO - Starting evaluation
+[2026-03-26 10:31:42,162 ] 24 root - INFO - Calculating accuracy score
+[2026-03-26 10:31:42,163 ] 27 root - INFO - Calculating precision score
+[2026-03-26 10:31:42,166 ] 30 root - INFO - Calculating F1 score
+[2026-03-26 10:31:42,168 ] 33 root - INFO - Calculating confusion matrix
+[2026-03-26 10:31:42,169 ] 36 root - INFO - Calculating recall score
+[2026-03-26 10:31:42,176 ] 73 root - INFO - Evaluation report saved at reports\adaboost.pdf
+[2026-03-26 10:31:42,179 ] 22 root - INFO - Starting evaluation
+[2026-03-26 10:31:42,180 ] 24 root - INFO - Calculating accuracy score
+[2026-03-26 10:31:42,182 ] 27 root - INFO - Calculating precision score
+[2026-03-26 10:31:42,184 ] 30 root - INFO - Calculating F1 score
+[2026-03-26 10:31:42,187 ] 33 root - INFO - Calculating confusion matrix
+[2026-03-26 10:31:42,188 ] 36 root - INFO - Calculating recall score
+[2026-03-26 10:31:42,191 ] 22 root - INFO - Starting evaluation
+[2026-03-26 10:31:42,192 ] 24 root - INFO - Calculating accuracy score
+[2026-03-26 10:31:42,193 ] 27 root - INFO - Calculating precision score
+[2026-03-26 10:31:42,195 ] 30 root - INFO - Calculating F1 score
+[2026-03-26 10:31:42,197 ] 33 root - INFO - Calculating confusion matrix
+[2026-03-26 10:31:42,198 ] 36 root - INFO - Calculating recall score
+[2026-03-26 10:31:42,205 ] 73 root - INFO - Evaluation report saved at reports\xgboost.pdf
+[2026-03-26 10:31:42,206 ] 22 root - INFO - Starting evaluation
+[2026-03-26 10:31:42,206 ] 24 root - INFO - Calculating accuracy score
+[2026-03-26 10:31:42,207 ] 27 root - INFO - Calculating precision score
+[2026-03-26 10:31:42,210 ] 30 root - INFO - Calculating F1 score
+[2026-03-26 10:31:42,213 ] 33 root - INFO - Calculating confusion matrix
+[2026-03-26 10:31:42,214 ] 36 root - INFO - Calculating recall score
+[2026-03-26 10:31:42,218 ] 22 root - INFO - Starting evaluation
+[2026-03-26 10:31:42,218 ] 24 root - INFO - Calculating accuracy score
+[2026-03-26 10:31:42,219 ] 27 root - INFO - Calculating precision score
+[2026-03-26 10:31:42,221 ] 30 root - INFO - Calculating F1 score
+[2026-03-26 10:31:42,223 ] 33 root - INFO - Calculating confusion matrix
+[2026-03-26 10:31:42,225 ] 36 root - INFO - Calculating recall score
+[2026-03-26 10:31:42,231 ] 73 root - INFO - Evaluation report saved at reports\voting_classifier.pdf
+[2026-03-26 10:31:42,232 ] 22 root - INFO - Starting evaluation
+[2026-03-26 10:31:42,232 ] 24 root - INFO - Calculating accuracy score
+[2026-03-26 10:31:42,233 ] 27 root - INFO - Calculating precision score
+[2026-03-26 10:31:42,235 ] 30 root - INFO - Calculating F1 score
+[2026-03-26 10:31:42,238 ] 33 root - INFO - Calculating confusion matrix
+[2026-03-26 10:31:42,239 ] 36 root - INFO - Calculating recall score
+[2026-03-26 10:31:42,243 ] 22 root - INFO - Starting evaluation
+[2026-03-26 10:31:42,243 ] 24 root - INFO - Calculating accuracy score
+[2026-03-26 10:31:42,244 ] 27 root - INFO - Calculating precision score
+[2026-03-26 10:31:42,246 ] 30 root - INFO - Calculating F1 score
+[2026-03-26 10:31:42,248 ] 33 root - INFO - Calculating confusion matrix
+[2026-03-26 10:31:42,249 ] 36 root - INFO - Calculating recall score
+[2026-03-26 10:31:42,256 ] 73 root - INFO - Evaluation report saved at reports\bagging_knn.pdf
+[2026-03-26 10:31:42,257 ] 22 root - INFO - Starting evaluation
+[2026-03-26 10:31:42,257 ] 24 root - INFO - Calculating accuracy score
+[2026-03-26 10:31:42,258 ] 27 root - INFO - Calculating precision score
+[2026-03-26 10:31:42,260 ] 30 root - INFO - Calculating F1 score
+[2026-03-26 10:31:42,263 ] 33 root - INFO - Calculating confusion matrix
+[2026-03-26 10:31:42,264 ] 36 root - INFO - Calculating recall score
+[2026-03-26 10:31:42,268 ] 22 root - INFO - Starting evaluation
+[2026-03-26 10:31:42,268 ] 24 root - INFO - Calculating accuracy score
+[2026-03-26 10:31:42,269 ] 27 root - INFO - Calculating precision score
+[2026-03-26 10:31:42,271 ] 30 root - INFO - Calculating F1 score
+[2026-03-26 10:31:42,273 ] 33 root - INFO - Calculating confusion matrix
+[2026-03-26 10:31:42,274 ] 36 root - INFO - Calculating recall score
+[2026-03-26 10:31:42,282 ] 73 root - INFO - Evaluation report saved at reports\bagging_svm.pdf
+[2026-03-26 10:31:42,282 ] 166 root - INFO - Running completed
+[2026-03-26 10:31:42,282 ] 119 root - INFO - Preparing new data for prediction
+[2026-03-26 10:31:42,283 ] 64 root - INFO - Preparing new data for prediction
+[2026-03-26 10:31:42,283 ] 66 root - INFO - Running new data ingestion
+[2026-03-26 10:31:42,283 ] 55 root - INFO - Starting new data ingestion
+[2026-03-26 10:31:42,283 ] 62 root - INFO - Converting dictionary input to DataFrame
+[2026-03-26 10:31:42,284 ] 78 root - INFO - New data ingestion completed successfully
+[2026-03-26 10:31:42,284 ] 69 root - INFO - Running feature engineering on new data
+[2026-03-26 10:31:42,284 ] 72 root - INFO - Starting feature engineering for new data
+[2026-03-26 10:31:42,285 ] 26 root - INFO - Applying log transform to rainfall column
+[2026-03-26 10:31:42,285 ] 29 root - INFO - Creating N, P, K ratio features
+[2026-03-26 10:31:42,287 ] 34 root - INFO - Calculating total nutrients
+[2026-03-26 10:31:42,287 ] 37 root - INFO - Calculating climate index
+[2026-03-26 10:31:42,288 ] 42 root - INFO - Creating interaction feature: temp_humidity
+[2026-03-26 10:31:42,288 ] 45 root - INFO - Creating interaction feature: rain_temp
+[2026-03-26 10:31:42,289 ] 83 root - INFO - Feature engineering for new data completed successfully
+[2026-03-26 10:31:42,289 ] 72 root - INFO - Running transformation on new data
+[2026-03-26 10:31:42,289 ] 95 root - INFO - Starting transformation for new data
+[2026-03-26 10:31:42,290 ] 105 root - INFO - Loading saved scaler
+[2026-03-26 10:31:42,290 ] 30 root - INFO - Loading the model
+[2026-03-26 10:31:42,306 ] 34 root - INFO - Model loaded successfully
+[2026-03-26 10:31:42,306 ] 108 root - INFO - Transforming new data using saved scaler
+[2026-03-26 10:31:42,307 ] 113 root - INFO - New data transformation completed successfully
+[2026-03-26 10:31:42,308 ] 75 root - INFO - New data prepared successfully
+[2026-03-26 10:31:42,308 ] 59 root - INFO - Loading all saved models
+[2026-03-26 10:31:42,308 ] 30 root - INFO - Loading the model
+[2026-03-26 10:31:42,325 ] 34 root - INFO - Model loaded successfully
+[2026-03-26 10:31:42,325 ] 30 root - INFO - Loading the model
+[2026-03-26 10:31:42,337 ] 34 root - INFO - Model loaded successfully
+[2026-03-26 10:31:42,337 ] 30 root - INFO - Loading the model
+[2026-03-26 10:31:42,348 ] 34 root - INFO - Model loaded successfully
+[2026-03-26 10:31:42,348 ] 30 root - INFO - Loading the model
+[2026-03-26 10:31:42,367 ] 34 root - INFO - Model loaded successfully
+[2026-03-26 10:31:42,367 ] 30 root - INFO - Loading the model
+[2026-03-26 10:31:42,435 ] 34 root - INFO - Model loaded successfully
+[2026-03-26 10:31:42,435 ] 30 root - INFO - Loading the model
+[2026-03-26 10:31:42,448 ] 34 root - INFO - Model loaded successfully
+[2026-03-26 10:31:42,448 ] 30 root - INFO - Loading the model
+[2026-03-26 10:31:42,466 ] 34 root - INFO - Model loaded successfully
+[2026-03-26 10:31:42,466 ] 30 root - INFO - Loading the model
+[2026-03-26 10:31:42,495 ] 34 root - INFO - Model loaded successfully
+[2026-03-26 10:31:42,495 ] 30 root - INFO - Loading the model
+[2026-03-26 10:31:42,505 ] 34 root - INFO - Model loaded successfully
+[2026-03-26 10:31:42,505 ] 30 root - INFO - Loading the model
+[2026-03-26 10:31:42,523 ] 34 root - INFO - Model loaded successfully
+[2026-03-26 10:31:42,523 ] 30 root - INFO - Loading the model
+[2026-03-26 10:31:42,619 ] 34 root - INFO - Model loaded successfully
+[2026-03-26 10:31:42,619 ] 73 root - INFO - Loaded 11 models successfully
+[2026-03-26 10:31:42,619 ] 126 root - INFO - Predicting with adaboost
+[2026-03-26 10:31:42,628 ] 126 root - INFO - Predicting with bagging_knn
+[2026-03-26 10:31:42,640 ] 126 root - INFO - Predicting with bagging_svm
+[2026-03-26 10:31:42,646 ] 126 root - INFO - Predicting with decision_tree
+[2026-03-26 10:31:42,648 ] 126 root - INFO - Predicting with gradient_boosting
+[2026-03-26 10:31:42,652 ] 126 root - INFO - Predicting with knn
+[2026-03-26 10:31:42,655 ] 126 root - INFO - Predicting with perceptron
+[2026-03-26 10:31:42,658 ] 126 root - INFO - Predicting with random_forest
+[2026-03-26 10:31:42,671 ] 126 root - INFO - Predicting with svm
+[2026-03-26 10:31:42,673 ] 126 root - INFO - Predicting with voting_classifier
+[2026-03-26 10:31:42,691 ] 126 root - INFO - Predicting with xgboost
+[2026-03-26 10:31:42,701 ] 122 root - INFO - Loading label encoder for decoding prediction
+[2026-03-26 10:31:42,702 ] 30 root - INFO - Loading the model
+[2026-03-26 10:31:42,746 ] 34 root - INFO - Model loaded successfully
+[2026-03-26 10:31:42,747 ] 122 root - INFO - Loading label encoder for decoding prediction
+[2026-03-26 10:31:42,747 ] 30 root - INFO - Loading the model
+[2026-03-26 10:31:42,748 ] 34 root - INFO - Model loaded successfully
+[2026-03-26 10:31:42,748 ] 122 root - INFO - Loading label encoder for decoding prediction
+[2026-03-26 10:31:42,749 ] 30 root - INFO - Loading the model
+[2026-03-26 10:31:42,750 ] 34 root - INFO - Model loaded successfully
+[2026-03-26 10:31:42,750 ] 122 root - INFO - Loading label encoder for decoding prediction
+[2026-03-26 10:31:42,750 ] 30 root - INFO - Loading the model
+[2026-03-26 10:31:42,751 ] 34 root - INFO - Model loaded successfully
+[2026-03-26 10:31:42,752 ] 122 root - INFO - Loading label encoder for decoding prediction
+[2026-03-26 10:31:42,752 ] 30 root - INFO - Loading the model
+[2026-03-26 10:31:42,753 ] 34 root - INFO - Model loaded successfully
+[2026-03-26 10:31:42,753 ] 122 root - INFO - Loading label encoder for decoding prediction
+[2026-03-26 10:31:42,754 ] 30 root - INFO - Loading the model
+[2026-03-26 10:31:42,754 ] 34 root - INFO - Model loaded successfully
+[2026-03-26 10:31:42,755 ] 122 root - INFO - Loading label encoder for decoding prediction
+[2026-03-26 10:31:42,755 ] 30 root - INFO - Loading the model
+[2026-03-26 10:31:42,755 ] 34 root - INFO - Model loaded successfully
+[2026-03-26 10:31:42,756 ] 122 root - INFO - Loading label encoder for decoding prediction
+[2026-03-26 10:31:42,756 ] 30 root - INFO - Loading the model
+[2026-03-26 10:31:42,757 ] 34 root - INFO - Model loaded successfully
+[2026-03-26 10:31:42,758 ] 122 root - INFO - Loading label encoder for decoding prediction
+[2026-03-26 10:31:42,758 ] 30 root - INFO - Loading the model
+[2026-03-26 10:31:42,759 ] 34 root - INFO - Model loaded successfully
+[2026-03-26 10:31:42,760 ] 122 root - INFO - Loading label encoder for decoding prediction
+[2026-03-26 10:31:42,760 ] 30 root - INFO - Loading the model
+[2026-03-26 10:31:42,761 ] 34 root - INFO - Model loaded successfully
+[2026-03-26 10:31:42,762 ] 122 root - INFO - Loading label encoder for decoding prediction
+[2026-03-26 10:31:42,762 ] 30 root - INFO - Loading the model
+[2026-03-26 10:31:42,763 ] 34 root - INFO - Model loaded successfully
+[2026-03-26 10:31:42,764 ] 122 root - INFO - Loading label encoder for decoding prediction
+[2026-03-26 10:31:42,765 ] 30 root - INFO - Loading the model
+[2026-03-26 10:31:42,765 ] 34 root - INFO - Model loaded successfully

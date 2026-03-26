@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crop Recommendation System</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        background: #f4f7f9;
+        color: #1f2937;
+        padding: 30px;
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+      }
+
+      .card {
+        background: #ffffff;
+        border-radius: 20px;
+        padding: 30px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      }
+
+      h1 {
+        font-size: 36px;
+        margin-bottom: 15px;
+      }
+
+      h2 {
+        font-size: 24px;
+        margin-bottom: 15px;
+      }
+
+      p {
+        color: #4b5563;
+        line-height: 1.6;
+      }
+
+      .badge {
+        display: inline-block;
+        background: #dcfce7;
+        color: #166534;
+        padding: 8px 14px;
+        border-radius: 999px;
+        font-size: 14px;
+        margin-bottom: 15px;
+      }
+
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        margin-top: 25px;
+      }
+
+      .stat-box {
+        background: #f8fafc;
+        border: 1px solid #e5e7eb;
+        border-radius: 16px;
+        padding: 18px;
+      }
+
+      .stat-box small {
+        color: #6b7280;
+        display: block;
+        margin-bottom: 6px;
+      }
+
+      .stat-box strong {
+        font-size: 18px;
+      }
+
+      .steps {
+        margin-top: 20px;
+        display: grid;
+        gap: 12px;
+      }
+
+      .step {
+        background: #f8fafc;
+        border: 1px solid #e5e7eb;
+        border-radius: 14px;
+        padding: 14px;
+        color: #4b5563;
+      }
+
+      form {
+        display: grid;
+        gap: 18px;
+        margin-top: 20px;
+      }
+
+      .form-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+      }
+
+      .input-group {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      label {
+        font-size: 14px;
+        font-weight: bold;
+      }
+
+      input {
+        padding: 12px 14px;
+        border: 1px solid #d1d5db;
+        border-radius: 12px;
+        font-size: 15px;
+      }
+
+      .btn-group {
+        display: flex;
+        gap: 12px;
+        margin-top: 10px;
+      }
+
+      button {
+        border: none;
+        border-radius: 12px;
+        padding: 12px 18px;
+        font-size: 15px;
+        cursor: pointer;
+      }
+
+      .primary-btn {
+        background: #111827;
+        color: white;
+      }
+
+      .secondary-btn {
+        background: #e5e7eb;
+        color: #111827;
+      }
+
+      .result-box,
+      .model-box,
+      .error-box {
+        margin-top: 20px;
+        padding: 18px;
+        border-radius: 16px;
+      }
+
+      .result-box {
+        background: #f8fafc;
+        border: 1px solid #e5e7eb;
+      }
+
+      .error-box {
+        background: #fef2f2;
+        border: 1px solid #fecaca;
+        color: #b91c1c;
+      }
+
+      .models-grid {
+        margin-top: 15px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+
+      .model-box {
+        background: #f8fafc;
+        border: 1px solid #e5e7eb;
+      }
+
+      @media (max-width: 900px) {
+        .container {
+          grid-template-columns: 1fr;
+        }
+
+        .form-grid,
+        .stats,
+        .models-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <div class="card">
+          <div class="badge">ML + Agriculture</div>
+          <h1>Crop Recommendation System</h1>
+          <p>
+            Enter soil nutrients and environmental values to predict the most
+            suitable crop using multiple trained machine learning models and
+            majority voting.
+          </p>
+
+          <div class="stats">
+            <div class="stat-box">
+              <small>Inputs</small>
+              <strong>7 Features</strong>
+            </div>
+            <div class="stat-box">
+              <small>Prediction</small>
+              <strong>Majority Voting</strong>
+            </div>
+            <div class="stat-box">
+              <small>Models</small>
+              <strong>Ensemble Based</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top: 25px">
+          <h2>How it works</h2>
+          <div class="steps">
+            <div class="step">
+              1. Enter N, P, K, temperature, humidity, pH, and rainfall values.
+            </div>
+            <div class="step">
+              2. The backend applies feature engineering and scaling.
+            </div>
+            <div class="step">
+              3. Multiple models predict the crop and the final result is
+              selected using voting.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Predict Crop</h2>
+        <p>Fill in all values to get a recommendation.</p>
+
+        <form id="cropForm">
+          <div class="form-grid">
+            <div class="input-group">
+              <label for="N">Nitrogen (N)</label>
+              <input
+                type="number"
+                step="any"
+                id="N"
+                name="N"
+                placeholder="e.g. 90"
+                required
+              />
+            </div>
+
+            <div class="input-group">
+              <label for="P">Phosphorus (P)</label>
+              <input
+                type="number"
+                step="any"
+                id="P"
+                name="P"
+                placeholder="e.g. 42"
+                required
+              />
+            </div>
+
+            <div class="input-group">
+              <label for="K">Potassium (K)</label>
+              <input
+                type="number"
+                step="any"
+                id="K"
+                name="K"
+                placeholder="e.g. 43"
+                required
+              />
+            </div>
+
+            <div class="input-group">
+              <label for="temperature">Temperature</label>
+              <input
+                type="number"
+                step="any"
+                id="temperature"
+                name="temperature"
+                placeholder="e.g. 20.8"
+                required
+              />
+            </div>
+
+            <div class="input-group">
+              <label for="humidity">Humidity</label>
+              <input
+                type="number"
+                step="any"
+                id="humidity"
+                name="humidity"
+                placeholder="e.g. 82"
+                required
+              />
+            </div>
+
+            <div class="input-group">
+              <label for="ph">pH</label>
+              <input
+                type="number"
+                step="any"
+                id="ph"
+                name="ph"
+                placeholder="e.g. 6.5"
+                required
+              />
+            </div>
+
+            <div class="input-group">
+              <label for="rainfall">Rainfall</label>
+              <input
+                type="number"
+                step="any"
+                id="rainfall"
+                name="rainfall"
+                placeholder="e.g. 202.9"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="btn-group">
+            <button type="submit" class="primary-btn">
+              Get Recommendation
+            </button>
+            <button type="reset" class="secondary-btn">Reset</button>
+          </div>
+        </form>
+
+        <div id="error"></div>
+        <div id="result"></div>
+      </div>
+    </div>
+
+    <script>
+      const form = document.getElementById("cropForm");
+      const resultDiv = document.getElementById("result");
+      const errorDiv = document.getElementById("error");
+
+      function getNumber(id) {
+        const value = document.getElementById(id).value.trim();
+        if (value === "") {
+          throw new Error(`${id} is required`);
+        }
+        const num = Number(value);
+        if (Number.isNaN(num)) {
+          throw new Error(`${id} must be a valid number`);
+        }
+        return num;
+      }
+
+      form.addEventListener("submit", async function (e) {
+        e.preventDefault();
+
+        resultDiv.innerHTML = "";
+        errorDiv.innerHTML = "";
+
+        let payload;
+
+        try {
+          payload = {
+            N: getNumber("N"),
+            P: getNumber("P"),
+            K: getNumber("K"),
+            temperature: getNumber("temperature"),
+            humidity: getNumber("humidity"),
+            ph: getNumber("ph"),
+            rainfall: getNumber("rainfall"),
+          };
+        } catch (err) {
+          errorDiv.innerHTML = `<div class="error-box">${err.message}</div>`;
+          return;
+        }
+
+        try {
+          const response = await fetch("http://127.0.0.1:8000/predict", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(payload),
+          });
+
+          const data = await response.json();
+
+          if (!response.ok) {
+            throw new Error(
+              data.detail
+                ? JSON.stringify(data.detail)
+                : "Failed to get prediction from server",
+            );
+          }
+
+          let finalPrediction = data.final_prediction;
+          if (Array.isArray(finalPrediction)) {
+            finalPrediction = finalPrediction[0];
+          }
+
+          let html = `
+        <div class="result-box">
+          <p style="font-size: 14px; color: #6b7280;">Final Recommendation</p>
+          <h2 style="margin-top: 8px;">${finalPrediction || "N/A"}</h2>
+        </div>
+      `;
+
+          if (data.individual_predictions) {
+            html += `<div style="margin-top: 20px;"><h2 style="font-size: 20px;">Model-wise Predictions</h2><div class="models-grid">`;
+
+            for (const model in data.individual_predictions) {
+              let pred = data.individual_predictions[model];
+              if (Array.isArray(pred)) {
+                pred = pred[0];
+              }
+
+              html += `
+            <div class="model-box">
+              <p style="font-size: 14px; color: #6b7280; text-transform: capitalize;">${model.replaceAll("_", " ")}</p>
+              <h3 style="margin-top: 8px;">${pred}</h3>
+            </div>
+          `;
+            }
+
+            html += `</div></div>`;
+          }
+
+          resultDiv.innerHTML = html;
+        } catch (error) {
+          errorDiv.innerHTML = `<div class="error-box">${error.message}</div>`;
+        }
+      });
+    </script>
+  </body>
+</html>
