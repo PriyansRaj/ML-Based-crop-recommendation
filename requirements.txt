@@ -6,4 +6,4 @@ xgboost
 pandas
 fpdf2
 fastapi
-uvicorn
+uvicorn[standard]
