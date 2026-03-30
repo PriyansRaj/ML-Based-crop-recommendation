@@ -1,15 +1,24 @@
 from typing import Any
 from collections import Counter
+from pathlib import Path
 
 import numpy as np
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
+
 from pydantic import BaseModel, Field
 
 from src.app import Main
 
 
 app = FastAPI(title="Crop Recommendation API")
+
+BASE_DIR = Path(__file__).resolve().parent
+INDEX_FILE = BASE_DIR / "index.html"
+
+if STATIC_DIR.exists():
+    app.mount("/static", StaticFiles(directory=str(STATIC_DIR)), name="static")
 
 app.add_middleware(
     CORSMiddleware,
@@ -39,7 +48,9 @@ main_obj = Main()
 
 
 @app.get("/")
-def home() -> dict[str, str]:
+def home():
+    if INDEX_FILE.exists():
+        return FileResponse(INDEX_FILE)
     return {"message": "Crop Recommendation API is running"}
 
 
@@ -120,4 +131,3 @@ def predict_raw(data: CropInput) -> dict[str, Any]:
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
-
