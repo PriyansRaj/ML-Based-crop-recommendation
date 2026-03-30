@@ -17,9 +17,6 @@ app = FastAPI(title="Crop Recommendation API")
 BASE_DIR = Path(__file__).resolve().parent
 INDEX_FILE = BASE_DIR / "index.html"
 
-if STATIC_DIR.exists():
-    app.mount("/static", StaticFiles(directory=str(STATIC_DIR)), name="static")
-
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
