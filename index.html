@@ -342,103 +342,105 @@
         <div id="result"></div>
       </div>
     </div>
-
     <script>
-      const form = document.getElementById("cropForm");
-      const resultDiv = document.getElementById("result");
-      const errorDiv = document.getElementById("error");
+  const form = document.getElementById("cropForm");
+  const resultDiv = document.getElementById("result");
+  const errorDiv = document.getElementById("error");
 
-      function getNumber(id) {
-        const value = document.getElementById(id).value.trim();
-        if (value === "") {
-          throw new Error(`${id} is required`);
-        }
-        const num = Number(value);
-        if (Number.isNaN(num)) {
-          throw new Error(`${id} must be a valid number`);
-        }
-        return num;
+  function getNumber(id) {
+    const value = document.getElementById(id).value.trim();
+    if (value === "") {
+      throw new Error(`${id} is required`);
+    }
+    const num = Number(value);
+    if (Number.isNaN(num)) {
+      throw new Error(`${id} must be a valid number`);
+    }
+    return num;
+  }
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    resultDiv.innerHTML = "";
+    errorDiv.innerHTML = "";
+
+    let payload;
+
+    try {
+      payload = {
+        N: getNumber("N"),
+        P: getNumber("P"),
+        K: getNumber("K"),
+        temperature: getNumber("temperature"),
+        humidity: getNumber("humidity"),
+        ph: getNumber("ph"),
+        rainfall: getNumber("rainfall"),
+      };
+    } catch (err) {
+      errorDiv.innerHTML = `<div class="error-box">${err.message}</div>`;
+      return;
+    }
+
+    try {
+      const response = await fetch("/predict", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(
+          data.detail
+            ? JSON.stringify(data.detail)
+            : "Failed to get prediction from server",
+        );
       }
 
-      form.addEventListener("submit", async function (e) {
-        e.preventDefault();
+      let finalPrediction = data.final_prediction;
+      if (Array.isArray(finalPrediction)) {
+        finalPrediction = finalPrediction[0];
+      }
 
-        resultDiv.innerHTML = "";
-        errorDiv.innerHTML = "";
-
-        let payload;
-
-        try {
-          payload = {
-            N: getNumber("N"),
-            P: getNumber("P"),
-            K: getNumber("K"),
-            temperature: getNumber("temperature"),
-            humidity: getNumber("humidity"),
-            ph: getNumber("ph"),
-            rainfall: getNumber("rainfall"),
-          };
-        } catch (err) {
-          errorDiv.innerHTML = `<div class="error-box">${err.message}</div>`;
-          return;
-        }
-
-        try {
-          const response = await fetch("http://127.0.0.1:8000/predict", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(payload),
-          });
-
-          const data = await response.json();
-
-          if (!response.ok) {
-            throw new Error(
-              data.detail
-                ? JSON.stringify(data.detail)
-                : "Failed to get prediction from server",
-            );
-          }
-
-          let finalPrediction = data.final_prediction;
-          if (Array.isArray(finalPrediction)) {
-            finalPrediction = finalPrediction[0];
-          }
-
-          let html = `
+      let html = `
         <div class="result-box">
           <p style="font-size: 14px; color: #6b7280;">Final Recommendation</p>
           <h2 style="margin-top: 8px;">${finalPrediction || "N/A"}</h2>
         </div>
       `;
 
-          if (data.individual_predictions) {
-            html += `<div style="margin-top: 20px;"><h2 style="font-size: 20px;">Model-wise Predictions</h2><div class="models-grid">`;
+      if (data.individual_predictions) {
+        html += `<div style="margin-top: 20px;"><h2 style="font-size: 20px;">Model-wise Predictions</h2><div class="models-grid">`;
 
-            for (const model in data.individual_predictions) {
-              let pred = data.individual_predictions[model];
-              if (Array.isArray(pred)) {
-                pred = pred[0];
-              }
+        for (const model in data.individual_predictions) {
+          let pred = data.individual_predictions[model];
+          if (Array.isArray(pred)) {
+            pred = pred[0];
+          }
 
-              html += `
+          html += `
             <div class="model-box">
               <p style="font-size: 14px; color: #6b7280; text-transform: capitalize;">${model.replaceAll("_", " ")}</p>
               <h3 style="margin-top: 8px;">${pred}</h3>
             </div>
           `;
-            }
-
-            html += `</div></div>`;
-          }
-
-          resultDiv.innerHTML = html;
-        } catch (error) {
-          errorDiv.innerHTML = `<div class="error-box">${error.message}</div>`;
         }
-      });
-    </script>
+
+        html += `</div></div>`;
+      }
+
+      resultDiv.innerHTML = html;
+    } catch (error) {
+      errorDiv.innerHTML = `<div class="error-box">${error.message}</div>`;
+    }
+  });
+</script>
+
+   
+   
   </body>
 </html>
