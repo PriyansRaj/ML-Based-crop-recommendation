@@ -1,2 +1,6 @@
 /notebooks
 /reports
+data/processed
+data/artifacts
+/__pycache__
+/tests

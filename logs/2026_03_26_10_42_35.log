@@ -1,0 +1,99 @@
+[2026-03-26 10:45:43,088 ] 100 root - INFO - Starting main pipeline
+[2026-03-26 10:45:43,091 ] 38 root - INFO - All preprocessing artifacts are available
+[2026-03-26 10:45:43,091 ] 106 root - INFO - Skipping preprocessing
+[2026-03-26 10:45:43,092 ] 54 root - INFO - Saved models found: ['adaboost.pkl', 'bagging_knn.pkl', 'bagging_svm.pkl', 'decision_tree.pkl', 'gradient_boosting.pkl', 'knn.pkl', 'perceptron.pkl', 'random_forest.pkl', 'svm.pkl', 'voting_classifier.pkl', 'xgboost.pkl']
+[2026-03-26 10:45:43,092 ] 112 root - INFO - Skipping model training
+[2026-03-26 10:45:43,092 ] 119 root - INFO - Preparing new data for prediction
+[2026-03-26 10:45:43,093 ] 64 root - INFO - Preparing new data for prediction
+[2026-03-26 10:45:43,093 ] 66 root - INFO - Running new data ingestion
+[2026-03-26 10:45:43,093 ] 55 root - INFO - Starting new data ingestion
+[2026-03-26 10:45:43,093 ] 62 root - INFO - Converting dictionary input to DataFrame
+[2026-03-26 10:45:43,094 ] 78 root - INFO - New data ingestion completed successfully
+[2026-03-26 10:45:43,094 ] 69 root - INFO - Running feature engineering on new data
+[2026-03-26 10:45:43,094 ] 72 root - INFO - Starting feature engineering for new data
+[2026-03-26 10:45:43,094 ] 26 root - INFO - Applying log transform to rainfall column
+[2026-03-26 10:45:43,095 ] 29 root - INFO - Creating N, P, K ratio features
+[2026-03-26 10:45:43,097 ] 34 root - INFO - Calculating total nutrients
+[2026-03-26 10:45:43,097 ] 37 root - INFO - Calculating climate index
+[2026-03-26 10:45:43,098 ] 42 root - INFO - Creating interaction feature: temp_humidity
+[2026-03-26 10:45:43,098 ] 45 root - INFO - Creating interaction feature: rain_temp
+[2026-03-26 10:45:43,098 ] 83 root - INFO - Feature engineering for new data completed successfully
+[2026-03-26 10:45:43,099 ] 72 root - INFO - Running transformation on new data
+[2026-03-26 10:45:43,099 ] 95 root - INFO - Starting transformation for new data
+[2026-03-26 10:45:43,099 ] 105 root - INFO - Loading saved scaler
+[2026-03-26 10:45:43,099 ] 30 root - INFO - Loading the model
+[2026-03-26 10:45:43,100 ] 34 root - INFO - Model loaded successfully
+[2026-03-26 10:45:43,100 ] 108 root - INFO - Transforming new data using saved scaler
+[2026-03-26 10:45:43,101 ] 113 root - INFO - New data transformation completed successfully
+[2026-03-26 10:45:43,102 ] 75 root - INFO - New data prepared successfully
+[2026-03-26 10:45:43,102 ] 59 root - INFO - Loading all saved models
+[2026-03-26 10:45:43,102 ] 30 root - INFO - Loading the model
+[2026-03-26 10:45:43,104 ] 34 root - INFO - Model loaded successfully
+[2026-03-26 10:45:43,104 ] 30 root - INFO - Loading the model
+[2026-03-26 10:45:43,106 ] 34 root - INFO - Model loaded successfully
+[2026-03-26 10:45:43,106 ] 30 root - INFO - Loading the model
+[2026-03-26 10:45:43,108 ] 34 root - INFO - Model loaded successfully
+[2026-03-26 10:45:43,108 ] 30 root - INFO - Loading the model
+[2026-03-26 10:45:43,109 ] 34 root - INFO - Model loaded successfully
+[2026-03-26 10:45:43,109 ] 30 root - INFO - Loading the model
+[2026-03-26 10:45:43,158 ] 34 root - INFO - Model loaded successfully
+[2026-03-26 10:45:43,159 ] 30 root - INFO - Loading the model
+[2026-03-26 10:45:43,160 ] 34 root - INFO - Model loaded successfully
+[2026-03-26 10:45:43,160 ] 30 root - INFO - Loading the model
+[2026-03-26 10:45:43,160 ] 34 root - INFO - Model loaded successfully
+[2026-03-26 10:45:43,160 ] 30 root - INFO - Loading the model
+[2026-03-26 10:45:43,168 ] 34 root - INFO - Model loaded successfully
+[2026-03-26 10:45:43,168 ] 30 root - INFO - Loading the model
+[2026-03-26 10:45:43,169 ] 34 root - INFO - Model loaded successfully
+[2026-03-26 10:45:43,169 ] 30 root - INFO - Loading the model
+[2026-03-26 10:45:43,175 ] 34 root - INFO - Model loaded successfully
+[2026-03-26 10:45:43,176 ] 30 root - INFO - Loading the model
+[2026-03-26 10:45:43,202 ] 34 root - INFO - Model loaded successfully
+[2026-03-26 10:45:43,202 ] 73 root - INFO - Loaded 11 models successfully
+[2026-03-26 10:45:43,203 ] 126 root - INFO - Predicting with adaboost
+[2026-03-26 10:45:43,211 ] 126 root - INFO - Predicting with bagging_knn
+[2026-03-26 10:45:43,219 ] 126 root - INFO - Predicting with bagging_svm
+[2026-03-26 10:45:43,224 ] 126 root - INFO - Predicting with decision_tree
+[2026-03-26 10:45:43,225 ] 126 root - INFO - Predicting with gradient_boosting
+[2026-03-26 10:45:43,229 ] 126 root - INFO - Predicting with knn
+[2026-03-26 10:45:43,232 ] 126 root - INFO - Predicting with perceptron
+[2026-03-26 10:45:43,233 ] 126 root - INFO - Predicting with random_forest
+[2026-03-26 10:45:43,244 ] 126 root - INFO - Predicting with svm
+[2026-03-26 10:45:43,245 ] 126 root - INFO - Predicting with voting_classifier
+[2026-03-26 10:45:43,261 ] 126 root - INFO - Predicting with xgboost
+[2026-03-26 10:45:43,266 ] 122 root - INFO - Loading label encoder for decoding prediction
+[2026-03-26 10:45:43,266 ] 30 root - INFO - Loading the model
+[2026-03-26 10:45:43,266 ] 34 root - INFO - Model loaded successfully
+[2026-03-26 10:45:43,267 ] 122 root - INFO - Loading label encoder for decoding prediction
+[2026-03-26 10:45:43,267 ] 30 root - INFO - Loading the model
+[2026-03-26 10:45:43,267 ] 34 root - INFO - Model loaded successfully
+[2026-03-26 10:45:43,268 ] 122 root - INFO - Loading label encoder for decoding prediction
+[2026-03-26 10:45:43,268 ] 30 root - INFO - Loading the model
+[2026-03-26 10:45:43,268 ] 34 root - INFO - Model loaded successfully
+[2026-03-26 10:45:43,269 ] 122 root - INFO - Loading label encoder for decoding prediction
+[2026-03-26 10:45:43,269 ] 30 root - INFO - Loading the model
+[2026-03-26 10:45:43,269 ] 34 root - INFO - Model loaded successfully
+[2026-03-26 10:45:43,270 ] 122 root - INFO - Loading label encoder for decoding prediction
+[2026-03-26 10:45:43,270 ] 30 root - INFO - Loading the model
+[2026-03-26 10:45:43,271 ] 34 root - INFO - Model loaded successfully
+[2026-03-26 10:45:43,271 ] 122 root - INFO - Loading label encoder for decoding prediction
+[2026-03-26 10:45:43,271 ] 30 root - INFO - Loading the model
+[2026-03-26 10:45:43,272 ] 34 root - INFO - Model loaded successfully
+[2026-03-26 10:45:43,272 ] 122 root - INFO - Loading label encoder for decoding prediction
+[2026-03-26 10:45:43,272 ] 30 root - INFO - Loading the model
+[2026-03-26 10:45:43,273 ] 34 root - INFO - Model loaded successfully
+[2026-03-26 10:45:43,273 ] 122 root - INFO - Loading label encoder for decoding prediction
+[2026-03-26 10:45:43,273 ] 30 root - INFO - Loading the model
+[2026-03-26 10:45:43,274 ] 34 root - INFO - Model loaded successfully
+[2026-03-26 10:45:43,274 ] 122 root - INFO - Loading label encoder for decoding prediction
+[2026-03-26 10:45:43,274 ] 30 root - INFO - Loading the model
+[2026-03-26 10:45:43,275 ] 34 root - INFO - Model loaded successfully
+[2026-03-26 10:45:43,275 ] 122 root - INFO - Loading label encoder for decoding prediction
+[2026-03-26 10:45:43,275 ] 30 root - INFO - Loading the model
+[2026-03-26 10:45:43,276 ] 34 root - INFO - Model loaded successfully
+[2026-03-26 10:45:43,276 ] 122 root - INFO - Loading label encoder for decoding prediction
+[2026-03-26 10:45:43,276 ] 30 root - INFO - Loading the model
+[2026-03-26 10:45:43,277 ] 34 root - INFO - Model loaded successfully
+[2026-03-26 10:45:43,277 ] 122 root - INFO - Loading label encoder for decoding prediction
+[2026-03-26 10:45:43,277 ] 30 root - INFO - Loading the model
+[2026-03-26 10:45:43,278 ] 34 root - INFO - Model loaded successfully
